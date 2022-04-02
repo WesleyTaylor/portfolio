@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block page_content %}
+<html lang="en">
+    <head>
+    </head>
+    <body>
+        <main>
+            <div id="intro" class="bg-image shadow-2-strong">
+                <div class="mask" style="background-color: rgba(0, 0, 0, 0.8);">
+                  <div class="container d-flex align-items-center justify-content-center text-center h-100">
+                    <div class="text-white">
+                        <div class="col-md-8 offset-md-2">
+                            <h1>{{ category | title }}</h1>
+                            <hr>
+                            {% for post in posts %}
+                                <h2><a href="{% url 'blog_detail' post.pk%}">{{ post.title }}</a></h2>
+                                <small>
+                                    {{ post.created_on.date }} |&nbsp;
+                                    Categories:&nbsp;
+                                    {% for category in post.categories.all %}
+                                    <a href="{% url 'blog_category' category.name %}">
+                                        {{ category.name }}
+                                    </a>&nbsp;
+                                    {% endfor %}
+                                </small>
+                                <p>{{ post.body | slice:":400" }}...</p>
+                            {% endfor %}
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </main>
+    </body>
+</html>
+{% endblock %}
