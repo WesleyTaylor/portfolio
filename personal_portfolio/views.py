@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.template import loader
 
 def home(request):
-    template = "home.html"
+    template = "index.html"
     context = {}
     return render(request, template, context)
 
