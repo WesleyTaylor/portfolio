@@ -17,6 +17,11 @@ def about(request):
     context = {}
     return render(request, template, context)
 
+def resume(request):
+    template = "resume.html"
+    context = {}
+    return render(request, template, context)
+
 def index(request):
     template = loader.get_template('index.html')
     context = {}
