@@ -9,6 +9,10 @@
   <body>
     <header>
       <style>
+        body
+        {
+          font-size: 18px; 
+        }
         #intro {
           background-image: url(/static/sunsetMountain.jpg);
           background-repeat: no-repeat;
@@ -18,11 +22,24 @@
         }
   
         /* Height for devices larger than 576px */
-        @media (min-width: 992px) {
+
+
+        .short-text { display: none; }
+
+
+        @media (max-width: 992px) {
+            .short-text { display: inline-block; }
+            .full-text { display: none; }
+            body {font-size:11px;}
+            h5 {font-size:11px}
         }
 
-        .navbar .nav-link {
-          color: #fff !important;
+        .navbar-collapse.collapse {
+          display: block!important;
+        }
+
+        .navbar-nav>li, .navbar-nav {
+          float: left !important;
         }
       </style>      
     </header>
@@ -31,23 +48,15 @@
       <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong" style="position:fixed; width:100%; top:0; left:0;">
         <div class="container-fluid">
           <a class="navbar-brand" href="../">
-            <strong>Wesley Taylor</strong>
+            <strong>
+              <span class="full-text">Wesley Taylor</span>
+              <span class="short-text">WT</span>
+            </strong>
           </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <i class="fas fa-bars"></i>
-          </button>
   
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item active">
+              <li class="nav-item">
                 <a class="nav-link" href="../">Home</a>
               </li>
               <li class="nav-item">

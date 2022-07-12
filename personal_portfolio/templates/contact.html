@@ -13,13 +13,6 @@
                   float: none;
                   margin-bottom: 10px;
                 }
-                .col-md-3 {
-                  width: 100px;
-                  height: 100px;
-                  position: relative;
-                  overflow: hidden;
-                  border-radius: 50%;
-                }
                 .card-img {
                   border-color: white;
                   border-radius: 50% 50% 50% 50%;
@@ -31,8 +24,29 @@
                   width: 75px;
                 }
                 .row {
-                  width: 500px;
+                  width: 1100px;
                   justify-content: center;
+                }
+                @media (max-width: 992px) {
+                  h5 {font-size:11px}
+                  h1 {font-size:22px}
+                  .card-img {
+                  border-color: white;
+                  border-radius: 50% 50% 50% 50%;
+                  border-style: solid;
+                  background: white;
+                  display: inline;
+                  margin: 0 auto;
+                  height: 40px;
+                  width: 40px;
+                  }
+                  .col-lg-4 {
+                    width:300px;
+                  }
+                  .row {
+                  width: 300px;
+                  justify-content: center;
+                } 
                 }
             </style>
         </header>
@@ -43,30 +57,27 @@
                     <div class="text-white">
                         <h1>Contact Me</h1>
                         <div class="row">
-                            <div class="col-md-4">
+                            <div class="col-lg-4">
                               <div class="card mb-3">
                                   <img class="card-img" src="/static/phone.png" width="100%">
                                   <div class="card-body">
-                                      <h5 class="card-title">Phone</h5>
-                                      <p class="card-text">719-761-0248</p>
+                                      <h5 class="card-title">719-761-0248</h5>
                                   </div>
                               </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-lg-4">
                               <div class="card mb-3">
                                   <img class="card-img" src="/static/email.png" width="100%">
                                   <div class="card-body">
-                                      <h5 class="card-title">Email</h5>
-                                      <p class="card-text">work.wesleytaylor@gmail.com</p>
+                                      <h5 class="card-title">work.wesleytaylor@gmail.com</h5>
                                   </div>
                               </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-lg-4">
                               <div class="card mb-3">
-                                  <img class="card-img" src="/static/linkedin.png" width="100%">
+                                <a href="https://www.linkedin.com/in/wesley-taylor-82783a220/" target="_blank" rel="noopener noreferrer" style="color:#FFFFFF;"><img class="card-img" src="/static/linkedin.png" width="100%"></a>
                                   <div class="card-body">
-                                      <h5 class="card-title">LinkedIn</h5>
-                                      <p class="card-text"> <a href="https://www.linkedin.com/in/wesley-taylor-82783a220/" target="_blank" rel="noopener noreferrer" style="color:#FFFFFF;">wesley-taylor-82783a220</a></p>
+                                      <h5 class="card-title"><a href="https://www.linkedin.com/in/wesley-taylor-82783a220/" target="_blank" rel="noopener noreferrer" style="color:#FFFFFF;">LinkedIn</a></h5>
                                   </div>
                               </div>
                             </div>
